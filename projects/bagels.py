@@ -7,7 +7,7 @@ Tags: short, game, puzzle"""
 
 import random
 
-NUM_DIGITS = 3 
+NUM_DIGITS = 3
 MAX_GUESSES = 10
 
 def main():
@@ -83,14 +83,14 @@ def getClues(guess, secretNum):
         elif guess[i] in secretNum:
             # A correct digit is in the incorrect place.
             clues.append('Pico')
-        if len(clues) == 0:
-            return 'Bagels'
-        else:
-            # Sort the clues into alphabetical order so their original order doesn't give information away
-            clues.sort()
+    if len(clues) == 0:
+        return 'Bagels'
+    else:
+        # Sort the clues into alphabetical order so their original order doesn't give information away
+        clues.sort()
 
             # Make a single string from the list of string clues.
-            return ' '.join(clues)
+        return ' '.join(clues)
         
 # If the program is run (instead of imported), run the game:
 if __name__ == '__main__':
